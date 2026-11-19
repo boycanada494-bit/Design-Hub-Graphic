@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Hub Graphics — Bold Brands & Visual Experiences</title>
+  <meta name="description" content="Creative design agency crafting memorable logos, brand identities, social media visuals, print collateral, and UI/UX graphics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#09090B',
+            surface: '#111115',
+            surfaceHover: '#18181F',
+            accent: '#8B5CF6',
+            accentPink: '#EC4899',
+            accentCyan: '#06B6D4',
+          },
+          boxShadow: {
+            glow: '0 0 40px -10px rgba(139, 92, 246, 0.45)',
+            card: '0 20px 40px -20px rgba(0, 0, 0, 0.75)',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #09090B;
+      color: #F4F4F6;
+      overflow-x: hidden;
+    }
+    .hero-mesh {
+      background-image:
+        radial-gradient(at 15% 15%, rgba(139, 92, 246, 0.22) 0px, transparent 50%),
+        radial-gradient(at 85% 20%, rgba(236, 72, 153, 0.16) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(6, 182, 212, 0.12) 0px, transparent 55%);
+    }
+    .glass-nav {
+      background: rgba(9, 9, 11, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #C4B5FD 45%, #F472B6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .bento-card {
+      background: linear-gradient(180deg, rgba(24, 24, 31, 0.85) 0%, rgba(17, 17, 21, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+    .bento-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(139, 92, 246, 0.45);
+      box-shadow: 0 24px 48px -24px rgba(139, 92, 246, 0.35);
+    }
+    .portfolio-card img {
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .portfolio-card:hover img {
+      transform: scale(1.06);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-violet-500/30 selection:text-violet-200">
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 via-fuchsia-500 to-cyan-400 p-[1.5px] shadow-glow">
+            <div class="w-full h-full rounded-[10.5px] bg-obsidian flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="leading-tight">
+            <span class="font-display font-extrabold text-lg tracking-tight text-white block">Design Hub</span>
+            <span class="text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-400 block -mt-0.5">Graphics</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+          <a href="#services" class="hover:text-white transition-colors">Services</a>
+          <a href="#work" class="hover:text-white transition-colors">Portfolio</a>
+          <a href="#process" class="hover:text-white transition-colors">Process</a>
+          <a href="#testimonials" class="hover:text-white transition-colors">Clients</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold bg-white text-zinc-950 hover:bg-violet-100 transition-colors shadow-sm">
+            Start a Project
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg text-zinc-300 hover:text-white hover:bg-white/5">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-surface/95 backdrop-blur-xl border-b border-white/10">
+      <div class="px-4 pt-2 pb-6 space-y-1 text-sm font-medium">
+        <a href="#services" class="mobile-link block px-3 py-2.5 rounded-lg text-zinc-200 hover:bg-white/5">Services</a>
+        <a href="#work" class="mobile-link block px-3 py-2.5 rounded-lg text-zinc-200 hover:bg-white/5">Portfolio</a>
+        <a href="#process" class="mobile-link block px-3 py-2.5 rounded-lg text-zinc-200 hover:bg-white/5">Process</a>
+        <a href="#testimonials" class="mobile-link block px-3 py-2.5 rounded-lg text-zinc-200 hover:bg-white/5">Clients</a>
+        <div class="pt-3">
+          <a href="#contact" class="mobile-link block w-full text-center px-4 py-3 rounded-xl font-semibold bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white">Start a Project</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative pt-28 pb-20 sm:pt-36 sm:pb-28 hero-mesh border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-xs font-medium text-violet-300 mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Available for Brand Identity, Social Campaigns & Print
+        </div>
+
+        <h1 class="font-display font-extrabold text-4xl sm:text-6xl lg:text-[4.25rem] tracking-tight leading-[1.08] gradient-text">
+          Designs That Make Brands Impossible to Ignore.
+        </h1>
+
+        <p class="mt-6 text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+          <strong class="text-zinc-200 font-semibold">Design Hub Graphics</strong> partners with founders, creators, and growing businesses to craft sharp logos, cohesive brand systems, high-converting social creatives, and print-ready visuals.
+        </p>
+
+        <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#work" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 hover:opacity-95 text-white shadow-glow transition-all">
+            Explore Our Work
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/10 transition-all">
+            Request a Custom Quote
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+        <div class="rounded-2xl bg-surface/80 border border-white/[0.07] p-5 text-center">
+          <div class="font-display font-extrabold text-2xl sm:text-3xl text-white">350+</div>
+          <div class="text-xs sm:text-sm text-zinc-400 mt-1">Projects Delivered</div>
+        </div>
+        <div class="rounded-2xl bg-surface/80 border border-white/[0.07] p-5 text-center">
+          <div class="font-display font-extrabold text-2xl sm:text-3xl text-violet-400">120+</div>
+          <div class="text-xs sm:text-sm text-zinc-400 mt-1">Brands Launched</div>
+        </div>
+        <div class="rounded-2xl bg-surface/80 border border-white/[0.07] p-5 text-center">
+          <div class="font-display font-extrabold text-2xl sm:text-3xl text-pink-400">48h</div>
+          <div class="text-xs sm:text-sm text-zinc-400 mt-1">Avg. First Draft</div>
+        </div>
+        <div class="rounded-2xl bg-surface/80 border border-white/[0.07] p-5 text-center">
+          <div class="font-display font-extrabold text-2xl sm:text-3xl text-cyan-400">4.9/5</div>
+          <div class="text-xs sm:text-sm text-zinc-400 mt-1">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 sm:py-28 border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-400">What We Craft</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2">Design Services Built for Impact</h2>
+        </div>
+        <p class="text-sm sm:text-base text-zinc-400 max-w-md">
+          Click any service to pre-fill your project inquiry below with tailored deliverables.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div data-service="Logo Design" class="service-card bento-card rounded-2xl p-7 cursor-pointer flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-violet-500/15 border border-violet-500/30 flex items-center justify-center text-violet-300 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Logo Design</h3>
+            <p class="text-sm text-zinc-400 mt-2.5 leading-relaxed">
+              Distinctive wordmarks, monograms, and symbolic marks engineered to stay crisp from tiny app icons to large billboards.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-medium text-violet-300">
+            <span>AI, EPS, SVG, PNG + Dark/Light</span>
+            <span>Select →</span>
+          </div>
+        </div>
+
+        <div data-service="Brand Identity" class="service-card bento-card rounded-2xl p-7 cursor-pointer flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-pink-500/15 border border-pink-500/30 flex items-center justify-center text-pink-300 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Brand Identity Systems</h3>
+            <p class="text-sm text-zinc-400 mt-2.5 leading-relaxed">
+              Complete visual guidelines covering color palettes, typography hierarchy, graphic patterns, stationery, and brand rules.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-medium text-pink-300">
+            <span>Brand Book + Templates + Mockups</span>
+            <span>Select →</span>
+          </div>
+        </div>
+
+        <div data-service="Social Media Graphics" class="service-card bento-card rounded-2xl p-7 cursor-pointer flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-300 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Social Media Posts & Ads</h3>
+            <p class="text-sm text-zinc-400 mt-2.5 leading-relaxed">
+              Scroll-stopping Instagram carousels, story covers, YouTube thumbnails, and paid ad creatives built for engagement.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-medium text-cyan-300">
+            <span>Feed, Stories, Reels & Ad Sizes</span>
+            <span>Select →</span>
+          </div>
+        </div>
+
+        <div data-service="Flyers & Brochures" class="service-card bento-card rounded-2xl p-7 cursor-pointer flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-300 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Flyers, Brochures & Pitch Decks</h3>
+            <p class="text-sm text-zinc-400 mt-2.5 leading-relaxed">
+              Editorial layouts, tri-fold brochures, event posters, and investor/sales decks that present complex offers clearly.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-medium text-amber-300">
+            <span>Print-Ready PDF + Editable Source</span>
+            <span>Select →</span>
+          </div>
+        </div>
+
+        <div data-service="Packaging & Print" class="service-card bento-card rounded-2xl p-7 cursor-pointer flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-300 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Packaging & Merch</h3>
+            <p class="text-sm text-zinc-400 mt-2.5 leading-relaxed">
+              Retail boxes, labels, pouches, and apparel graphics crafted with exact die-lines, bleed margins, and shelf appeal.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-medium text-emerald-300">
+            <span>Die-Line Ready + 3D Shelf Mockups</span>
+            <span>Select →</span>
+          </div>
+        </div>
+
+        <div data-service="UI/UX & Web Graphics" class="service-card bento-card rounded-2xl p-7 cursor-pointer flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-indigo-300 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Web & UI Visual Assets</h3>
+            <p class="text-sm text-zinc-400 mt-2.5 leading-relaxed">
+              Landing page hero art, custom icon sets, banners, and product visuals that elevate digital products and storefronts.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-medium text-indigo-300">
+            <span>Figma / Web-Optimized Assets</span>
+            <span>Select →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="py-20 sm:py-28 border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-pink-400">Selected Projects</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2">Recent Studio Work</h2>
+        </div>
+
+        <div id="filter-bar" class="flex flex-wrap gap-2">
+          <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-zinc-950 transition-all">All Work</button>
+          <button data-filter="branding" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-white/[0.05] text-zinc-300 hover:bg-white/[0.1] border border-white/10 transition-all">Logos & Branding</button>
+          <button data-filter="social" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-white/[0.05] text-zinc-300 hover:bg-white/[0.1] border border-white/10 transition-all">Social Media</button>
+          <button data-filter="print" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-white/[0.05] text-zinc-300 hover:bg-white/[0.1] border border-white/10 transition-all">Print & Packaging</button>
+          <button data-filter="ui" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-white/[0.05] text-zinc-300 hover:bg-white/[0.1] border border-white/10 transition-all">UI/UX Graphics</button>
+        </div>
+      </div>
+
+      <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <section id="process" class="py-20 sm:py-28 border-b border-white/[0.06] bg-surface/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">How We Work</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2">Simple, Fast & Transparent</h2>
+        <p class="text-sm sm:text-base text-zinc-400 mt-3">
+          From initial discovery to final export files, every project follows a clear four-step workflow.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-2xl bg-obsidian border border-white/[0.08] p-6">
+          <span class="font-display font-extrabold text-3xl text-violet-400/80">01</span>
+          <h3 class="font-display font-bold text-lg text-white mt-3">Brief & Discovery</h3>
+          <p class="text-sm text-zinc-400 mt-2 leading-relaxed">Share your goals, audience, references, and timeline—takes less than 5 minutes.</p>
+        </div>
+        <div class="rounded-2xl bg-obsidian border border-white/[0.08] p-6">
+          <span class="font-display font-extrabold text-3xl text-pink-400/80">02</span>
+          <h3 class="font-display font-bold text-lg text-white mt-3">Concept Exploration</h3>
+          <p class="text-sm text-zinc-400 mt-2 leading-relaxed">We craft original visual directions grounded in typography, contrast, and brand positioning.</p>
+        </div>
+        <div class="rounded-2xl bg-obsidian border border-white/[0.08] p-6">
+          <span class="font-display font-extrabold text-3xl text-cyan-400/80">03</span>
+          <h3 class="font-display font-bold text-lg text-white mt-3">Refinement Rounds</h3>
+          <p class="text-sm text-zinc-400 mt-2 leading-relaxed">We polish every spacing detail, color balance, and layout note until you love the result.</p>
+        </div>
+        <div class="rounded-2xl bg-obsidian border border-white/[0.08] p-6">
+          <span class="font-display font-extrabold text-3xl text-emerald-400/80">04</span>
+          <h3 class="font-display font-bold text-lg text-white mt-3">Final Master Files</h3>
+          <p class="text-sm text-zinc-400 mt-2 leading-relaxed">Receive organized vector, print-ready, and web-ready files ready to launch anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="py-20 sm:py-28 border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-14">
+        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-400">Client Feedback</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2">Trusted by Ambitious Teams</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <figure class="bento-card rounded-2xl p-7 flex flex-col justify-between">
+          <blockquote class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+            “Design Hub Graphics turned our rough notes into a cohesive brand identity and packaging line that immediately stood out on retail shelves.”
+          </blockquote>
+          <figcaption class="mt-6 pt-4 border-t border-white/[0.07] flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center font-display font-bold text-sm text-white">AK</div>
+            <div>
+              <div class="text-sm font-semibold text-white">Ayesha Kamran</div>
+              <div class="text-xs text-zinc-400">Founder, Noor Botanicals</div>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="bento-card rounded-2xl p-7 flex flex-col justify-between">
+          <blockquote class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+            “Fast turnarounds, zero fluff, and every social media campaign asset looked sharp across mobile and desktop feeds.”
+          </blockquote>
+          <figcaption class="mt-6 pt-4 border-t border-white/[0.07] flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center font-display font-bold text-sm text-white">TR</div>
+            <div>
+              <div class="text-sm font-semibold text-white">Tariq Raza</div>
+              <div class="text-xs text-zinc-400">Growth Lead, Kinetix Fitness</div>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="bento-card rounded-2xl p-7 flex flex-col justify-between">
+          <blockquote class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+            “Our investor pitch deck and event brochures got rave reactions. The visual hierarchy made our product story effortless to follow.”
+          </blockquote>
+          <figcaption class="mt-6 pt-4 border-t border-white/[0.07] flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-pink-500 flex items-center justify-center font-display font-bold text-sm text-white">SM</div>
+            <div>
+              <div class="text-sm font-semibold text-white">Sana Mahmood</div>
+              <div class="text-xs text-zinc-400">Co-Founder, PayPulse</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-pink-400">Let's Create</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2">Start Your Project With Design Hub Graphics</h2>
+          <p class="text-sm sm:text-base text-zinc-400 mt-4 leading-relaxed">
+            Tell us what you're building, your timeline, and your goals. Send an inquiry below or jump straight into a quick chat on WhatsApp.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="p-4 rounded-2xl bg-surface border border-white/[0.08] flex items-center gap-4">
+              <div class="w-10 h-10 rounded-xl bg-violet-500/15 text-violet-300 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-zinc-400">Email Studio</div>
+                <a href="mailto:hello@designhubgraphics.studio" class="text-sm font-semibold text-white hover:text-violet-300">hello@designhubgraphics.studio</a>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-surface border border-white/[0.08] flex items-center gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-300 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-zinc-400">WhatsApp & Response Time</div>
+                <div class="text-sm font-semibold text-white">0325-6404270 · Fast replies</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <form id="inquiry-form" class="rounded-3xl bg-surface border border-white/10 p-6 sm:p-8 shadow-card space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="client-name" class="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-2">Your Name *</label>
+                <input id="client-name" name="name" type="text" required placeholder="Ali Hassan" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-white/10 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-violet-500" />
+              </div>
+              <div>
+                <label for="client-email" class="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-2">Email or Phone *</label>
+                <input id="client-email" name="contact" type="text" required placeholder="ali@company.com or 0325-6404270" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-white/10 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-violet-500" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="service-select" class="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-2">Service Needed</label>
+                <select id="service-select" name="service" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-white/10 text-sm text-white focus:outline-none focus:border-violet-500">
+                  <option value="Logo Design">Logo Design</option>
+                  <option value="Brand Identity">Brand Identity</option>
+                  <option value="Social Media Graphics">Social Media Graphics</option>
+                  <option value="Flyers & Brochures">Flyers & Brochures</option>
+                  <option value="Packaging & Print">Packaging & Print</option>
+                  <option value="UI/UX & Web Graphics">UI/UX & Web Graphics</option>
+                </select>
+              </div>
+              <div>
+                <label for="budget-select" class="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-2">Estimated Budget</label>
+                <select id="budget-select" name="budget" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-white/10 text-sm text-white focus:outline-none focus:border-violet-500">
+                  <option value="$100 – $300">$100 – $300</option>
+                  <option value="$300 – $750" selected>$300 – $750</option>
+                  <option value="$750 – $1,500">$750 – $1,500</option>
+                  <option value="$1,500+">$1,500+</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="project-brief" class="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-2">Project Details *</label>
+              <textarea id="project-brief" name="brief" rows="4" required placeholder="Tell us about your brand, deliverables needed, style preferences, and deadline..." class="w-full px-4 py-3 rounded-xl bg-obsidian border border-white/10 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-violet-500"></textarea>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-2">
+              <button type="submit" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:opacity-95 text-white shadow-glow transition-all">
+                Send Inquiry
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+
+              <button id="whatsapp-send-btn" type="button" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 transition-all">
+                Send via WhatsApp
+              </button>
+            </div>
+
+            <div id="form-feedback" class="hidden rounded-xl p-4 text-sm bg-emerald-500/10 border border-emerald-500/30 text-emerald-200"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/[0.08] py-10 bg-surface/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-400">
+      <div class="font-display font-bold text-white">Design Hub Graphics</div>
+      <div>© <span id="year"></span> Design Hub Graphics. All rights reserved.</div>
+      <div class="flex items-center gap-5">
+        <a href="#services" class="hover:text-white transition-colors">Services</a>
+        <a href="#work" class="hover:text-white transition-colors">Portfolio</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <a id="floating-whatsapp" href="https://wa.me/923256404270" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-40 w-13 h-13 p-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 shadow-lg transition-transform hover:scale-105">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.453 3.484 1.328 5.016L2 22l5.156-1.359a9.92 9.92 0 004.875 1.25c5.516 0 9.969-4.453 9.969-9.969S17.547 2 12.031 2zm5.813 14.125c-.25.703-1.438 1.344-1.984 1.422-.516.078-1.172.109-1.891-.125-.438-.141-1-.328-1.719-.641-3.031-1.313-5.016-4.359-5.172-4.563-.156-.203-1.234-1.641-1.234-3.125s.781-2.219 1.063-2.516c.281-.297.609-.375.813-.375.203 0 .406 0 .594.016.188.016.438-.078.688.516.25.609.859 2.094.938 2.25.078.156.125.344.031.547-.094.203-.141.328-.281.5-.141.172-.297.391-.422.516-.141.141-.281.297-.125.578.156.281.703 1.156 1.5 1.875 1.031.922 1.906 1.203 2.188 1.344.281.141.438.125.609-.078.172-.203.703-.813.891-1.094.188-.281.375-.234.625-.141.25.094 1.594.75 1.875.891.281.141.469.203.531.313.063.109.063.641-.188 1.344z"/></svg>
+  </a>
+
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-2xl rounded-3xl bg-surface border border-white/15 overflow-hidden shadow-2xl">
+      <button id="close-modal" type="button" aria-label="Close Preview" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center border border-white/15">✕</button>
+      <div class="aspect-video w-full overflow-hidden bg-zinc-900">
+        <img id="modal-img" src="" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-6 sm:p-7">
+        <span id="modal-category" class="text-xs font-semibold uppercase tracking-widest text-violet-400"></span>
+        <h3 id="modal-title" class="font-display font-bold text-2xl text-white mt-1"></h3>
+        <p id="modal-desc" class="text-sm text-zinc-300 mt-3 leading-relaxed"></p>
+        <div class="mt-6 flex justify-end gap-3">
+          <button id="modal-order-btn" type="button" class="px-5 py-2.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white">Order Similar Design</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const AGENCY_WHATSAPP_NUMBER = '923256404270';
+
+    const PROJECTS = [
+      {
+        id: 1,
+        title: 'Veloce Roasters Identity',
+        category: 'branding',
+        categoryLabel: 'Logos & Branding',
+        image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80',
+        summary: 'Minimalist geometric emblem, typography system, and coffee bag visual direction.'
+      },
+      {
+        id: 2,
+        title: 'Pulse Drop Social Kit',
+        category: 'social',
+        categoryLabel: 'Social Media',
+        image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=900&q=80',
+        summary: 'High-contrast launch carousel templates, stories, and ad banners for a streetwear drop.'
+      },
+      {
+        id: 3,
+        title: 'Botanica Skincare Packaging',
+        category: 'print',
+        categoryLabel: 'Print & Packaging',
+        image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=900&q=80',
+        summary: 'Clean carton layout, label typography, and tactile finish specifications for retail launch.'
+      },
+      {
+        id: 4,
+        title: 'FinSight Dashboard UI Kit',
+        category: 'ui',
+        categoryLabel: 'UI/UX Graphics',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80',
+        summary: 'Data visualization cards, custom icons, and dark-mode interface graphics for SaaS.'
+      },
+      {
+        id: 5,
+        title: 'Solstice Festival Poster Series',
+        category: 'print',
+        categoryLabel: 'Print & Packaging',
+        image: 'https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=900&q=80',
+        summary: 'Bold typographic posters and event passes designed for stage and street visibility.'
+      },
+      {
+        id: 6,
+        title: 'Monolith Audio Mark',
+        category: 'branding',
+        categoryLabel: 'Logos & Branding',
+        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80',
+        summary: 'Precision sound-wave monogram and brand guidelines for studio hardware.'
+      }
+    ];
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const floatingWa = document.getElementById('floating-whatsapp');
+    floatingWa.href = `https://wa.me/${AGENCY_WHATSAPP_NUMBER}`;
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('glass-nav', window.scrollY > 20);
+    });
+
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+
+    menuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', !isHidden);
+      iconOpen.classList.toggle('hidden', isHidden);
+      iconClose.classList.toggle('hidden', !isHidden);
+    });
+
+    document.querySelectorAll('.mobile-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+
+    const grid = document.getElementById('portfolio-grid');
+    const modal = document.getElementById('project-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalCategory = document.getElementById('modal-category');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    let activeProject = null;
+
+    function renderProjects(filter = 'all') {
+      const filtered = filter === 'all' ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
+      grid.innerHTML = filtered.map((item) => `
+        <article data-id="${item.id}" class="portfolio-card group rounded-2xl overflow-hidden bg-surface border border-white/[0.08] cursor-pointer flex flex-col">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-zinc-900">
+            <img src="${item.image}" alt="${item.title}" loading="lazy" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-violet-400">${item.categoryLabel}</span>
+              <h3 class="font-display font-bold text-lg text-white mt-1 group-hover:text-violet-200 transition-colors">${item.title}</h3>
+              <p class="text-xs sm:text-sm text-zinc-400 mt-1.5 line-clamp-2">${item.summary}</p>
+            </div>
+            <div class="mt-4 text-xs font-semibold text-zinc-300 group-hover:text-white">View Preview →</div>
+          </div>
+        </article>
+      `).join('');
+
+      grid.querySelectorAll('.portfolio-card').forEach((card) => {
+        card.addEventListener('click', () => {
+          const project = PROJECTS.find((p) => p.id === Number(card.dataset.id));
+          if (!project) return;
+          activeProject = project;
+          modalImg.src = project.image;
+          modalImg.alt = project.title;
+          modalCategory.textContent = project.categoryLabel;
+          modalTitle.textContent = project.title;
+          modalDesc.textContent = project.summary;
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        });
+      });
+    }
+
+    renderProjects();
+
+    document.querySelectorAll('.filter-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach((b) => {
+          b.classList.remove('active', 'bg-white', 'text-zinc-950', 'font-semibold');
+          b.classList.add('bg-white/[0.05]', 'text-zinc-300', 'font-medium', 'border', 'border-white/10');
+        });
+        btn.classList.add('active', 'bg-white', 'text-zinc-950', 'font-semibold');
+        btn.classList.remove('bg-white/[0.05]', 'text-zinc-300', 'font-medium', 'border', 'border-white/10');
+        renderProjects(btn.dataset.filter);
+      });
+    });
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    document.getElementById('close-modal').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    const serviceSelect = document.getElementById('service-select');
+    const projectBrief = document.getElementById('project-brief');
+
+    document.querySelectorAll('.service-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        serviceSelect.value = card.dataset.service;
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        projectBrief.focus();
+      });
+    });
+
+    document.getElementById('modal-order-btn').addEventListener('click', () => {
+      if (activeProject) {
+        projectBrief.value = `Interested in a design similar to "${activeProject.title}" (${activeProject.categoryLabel}). `;
+      }
+      closeModal();
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      projectBrief.focus();
+    });
+
+    const form = document.getElementById('inquiry-form');
+    const feedback = document.getElementById('form-feedback');
+
+    function buildInquiryMessage() {
+      const name = document.getElementById('client-name').value.trim() || 'Client';
+      const contact = document.getElementById('client-email').value.trim() || 'Not provided';
+      const service = serviceSelect.value;
+      const budget = document.getElementById('budget-select').value;
+      const brief = projectBrief.value.trim() || 'General design inquiry';
+      return `Hello Design Hub Graphics!%0AName: ${encodeURIComponent(name)}%0AContact: ${encodeURIComponent(contact)}%0AService: ${encodeURIComponent(service)}%0ABudget: ${encodeURIComponent(budget)}%0ABrief: ${encodeURIComponent(brief)}`;
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      feedback.classList.remove('hidden');
+      feedback.textContent = 'Shukriya! Aapki inquiry tayar hai. Seedha chat ke liye "Send via WhatsApp" par click karein.';
+    });
+
+    document.getElementById('whatsapp-send-btn').addEventListener('click', () => {
+      const url = `https://wa.me/${AGENCY_WHATSAPP_NUMBER}?text=${buildInquiryMessage()}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  </script>
+</body>
+</html>
